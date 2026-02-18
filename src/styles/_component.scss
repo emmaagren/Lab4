@@ -1,0 +1,75 @@
+@use 'base' as b;
+@use 'sass:color';
+
+//////////NAVIGATION///////////
+
+nav {
+
+    ul {
+        list-style: none;
+        @include b.flex-center;
+        gap: 2rem;
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+
+                &:hover {
+                    color: darken(white, 20%);
+                }
+            }
+        }
+
+    }
+
+    //Responsiv meny
+    @include b.mobile {
+        ul {
+            flex-direction: column;
+        }
+    }
+
+
+}
+
+/////CARD//////
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/////IMAGE SECTION//////
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.image-stack__item {
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid lighten(b.$primary, 40%);
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/////SELECTOR/////
+
+.highlight {
+    @extend .card;
+    border-left: 5px solid b.$secondary;
+}
