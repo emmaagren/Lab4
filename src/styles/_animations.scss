@@ -1,0 +1,18 @@
+////// ANIMATIONER /////////
+
+//Fade-in för sektioner
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translate(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.highlight {
+    animation: fadeUp 0.8s;
+}
