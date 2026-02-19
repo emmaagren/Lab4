@@ -14,5 +14,16 @@
 
 .card,
 .highlight {
-    animation: fadeUp 0.8s;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+//Hover-effekt för sektioner
+.highlight,
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 25px rgba(248, 149, 227, 0.822);
+    }
 }
