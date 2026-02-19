@@ -19,8 +19,9 @@ const menuLinks = document.querySelectorAll('nav ul li a')
 menuLinks.forEach(link => {
     link.addEventListener('click' , () => {
         link.classList.add('menu-click')
-        setTimeout(() => {
+
+        link.addEventListener('animationend', () => {
             link.classList.remove('menu-click')
-        }, 400);
+        }, {once: true });
     });
 });
