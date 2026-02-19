@@ -1,5 +1,7 @@
 import './styles/main.scss';
 
+//Puls på sektioner.
+
 const cards = document.querySelectorAll('.card')
 
 cards.forEach(card => {
@@ -7,6 +9,18 @@ cards.forEach(card => {
         card.classList.add('pulse')
         setTimeout(() => {
             card.classList.remove('pulse')
-        }, 600)
-    })
-})
+        }, 600);
+    });
+});
+
+//Puls på meny.
+const menuLinks = document.querySelectorAll('nav ul li a')
+
+menuLinks.forEach(link => {
+    link.addEventListener('click' , () => {
+        link.classList.add('menu-click')
+        setTimeout(() => {
+            link.classList.remove('menu-click')
+        }, 400);
+    });
+});

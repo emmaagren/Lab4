@@ -46,15 +46,25 @@
 }
 
 //Pulse-animation vid klick.
+%pulse {
+    animation: pulse 0.4s ease-in-out;
+}
+
+.pulse {
+    @extend %pulse;
+}
+
+.menu-click {
+    @extend %pulse;
+}
+
 @keyframes pulse {
     0% { box-shadow: 0 0 0 rgba(0,0,0,0); }
     50% { box-shadow: 0 0 20px rgba(248, 149, 227, 0.822); }
     100% { box-shadow: 0 0 0 rgba(0,0,0,0); }
 }
 
-.pulse {
-    animation: pulse 0.6s;
-}
+
 
 //Rörligt objekt.
 @keyframes moveCircle {

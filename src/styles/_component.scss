@@ -6,6 +6,7 @@
 nav {
 
     ul {
+        display: inline-block;
         list-style: none;
         @include b.flex-center;
         gap: 2rem;
@@ -13,12 +14,15 @@ nav {
         li {
 
             a {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
                 text-decoration: none;
                 color: white;
                 font-weight: bold;
 
                 &:hover {
-                    color: darken(white, 20%);
+                    color: darken(white, 90%);
                 }
             }
         }
