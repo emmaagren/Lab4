@@ -1,3 +1,8 @@
+
+@use 'base' as b;
+
+
+
 ////// ANIMATIONER /////////
 
 //Fade-in för sektioner
@@ -48,4 +53,20 @@
 
 .pulse {
     animation: pulse 0.6s;
+}
+
+//Rörligt objekt.
+@keyframes moveCircle {
+    0% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(200px) scale(1.1); }
+    100% { transform: translateX(0) scale(1); }
+}
+
+.moving-circle {
+    width: 60px;
+    height: 60px;
+    background: b.$secondary;
+    border-radius: 50%;
+    animation: moveCircle 4s infinite ease-in-out;
+    margin: 2rem auto;
 }
