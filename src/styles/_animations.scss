@@ -27,3 +27,13 @@
         box-shadow: 0 15px 25px rgba(248, 149, 227, 0.822);
     }
 }
+
+//Hover-effekt för bilder
+.image-stack__item img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 15px 30px rgba(248, 149, 227, 0.822);
+    }
+}
